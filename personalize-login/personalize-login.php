@@ -288,6 +288,15 @@ class Personalize_Login_Plugin {
 				);
 				return sprintf( $err, wp_lostpassword_url() );
 
+            case 'email':
+                return __( 'The email address you entered is not valid.', 'personalize-login' );
+
+            case 'email_exists':
+                return __( 'An account exists with this email address.', 'personalize-login' );
+
+            case 'closed':
+                return __( 'Registering new users is currently not allowed.', 'personalize-login' );
+
 			default:
 				break;
 		}
